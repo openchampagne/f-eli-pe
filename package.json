@@ -1,0 +1,12 @@
+{
+  "name": "f.eli.pe",
+  "version": "2.0.0",
+  "description": "Felipe's super cool and super minimal portfolio",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./index.css -o tailwind.css --watch"
+  },
+  "keywords": [],
+  "author": "Felipe Castillo",
+  "license": "ISC"
+}
