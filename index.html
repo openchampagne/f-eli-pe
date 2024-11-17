@@ -10,206 +10,450 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <title>Felipe Castillo</title>
+    <style>
+        .hover-card {
+            opacity: 0;
+        }
+
+        .hover-card {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-card:hover {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-card.active {
+            transition-delay: 100ms;
+        }
+
+        .hover-card:not(:hover) {
+            transition-delay: 200ms;
+        }
+    </style>
 </head>
+
 
 <body class="text-theme font-poppins">
     <div class="bg-body">
         <div class="container flex items-center justify-around w-full px-8 mx-auto md:py-24">
-            <div class="flex flex-wrap max-w-3xl md:flex-nowrap">
-
+            <div class="flex flex-wrap max-w-4xl md:flex-nowrap">
                 <img id="felipe" height="250px" width="250px" class="w-56 h-56 p-4 mx-auto hover:scale-125"
                     src="img/felipe.png" />
 
                 <div class="flex flex-wrap justify-center mt-0 lg:ml-20 md:justify-start">
-                    <h1 class="text-5xl font-bold text-center md:text-6xl md:text-left text1 ">
+                    <h1 class="text-5xl font-bold text-center md:text-6xl md:text-left text1">
                         Hi, I'm Felipe.
                     </h1>
                     <div class="text-center text-md md:text-lg md:text-left">
                         <p class="my-4">
-                            I'm a Front End Software Engineer, I specialize in creating visually stunning and
-                            user-friendly interfaces for the web. I love turning complex problems into elegant
-                            solutions.
+                            I'm a Software Engineer who thrives on solving complex problems and transforming them into
+                            simple yet effective
+                            solutions.</p>
+                        <p class="my-4"> Whether it's designing seamless user interfaces or developing robust
+                            systems, I
+                            create web experiences that
+                            are intuitive, impactful, and built to last.</p>
                         </p>
                         <p class="my-4">
-                            Currently a Junior Developer at Planit Agency.
+                            Currently, I bring my expertise to <a class="underline underline-offset-2"
+                                href="https://adweek.com">ADWEEK</a>
+                            as a Software
+                            Engineer.
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
-    <div class="flex items-center justify-around w-full px-8  mt-4 bg-[#fff]">
+    <div class="flex items-center justify-around w-full px-8 mt-4 bg-[#fff]">
         <div class="flex flex-wrap md:flex-nowrap">
-
-            <div class="flex flex-wrap justify-center max-w-xl mt-0">
-
+            <div class="flex flex-wrap justify-center max-w-6xl mt-0">
                 <div id="contentSection" class="my-4 text-left text-md md:text-lg">
-                    <h5 class="my-4 text-sm font-semibold text-gray-400 uppercase">What I'm Working on</h5>
 
-                    <div class="my-4 duration-150 ease-in group:transition-colors group hover:text-blue-700">
-                        <a class="duration-150"
-                            href="https://chromewebstore.google.com/detail/enhance-gemini/hengddlmmobpckpmaalbmdlofpiljnon">
-                            <h4 class="font-semibold text-md">Enhance Gemini <span
-                                    class="px-2 text-sm font-semibold text-gray-500 bg-gray-200 rounded-md group-hover:text-blue-700 group-hover:ease-in group-hover:duration-150">Browser
-                                    Extension</span></h4>
-                            <p class="font-thin">
-                                Quick Search, Context Menus, And more for Gemini
-                            </p>
-                        </a>
+                    <div class="container mx-auto px-8 py-12">
+                        <h2 class="text-3xl font-bold mb-8 text-center md:text-left">Projects</h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                            <!-- Current Projects -->
+                            <div class="col-span-full">
+                                <h3 class="text-xl font-semibold text-gray-400 uppercase mb-6">What I'm Working on</h3>
+                            </div>
+
+                            <!-- Enhance Gemini -->
+                            <div
+                                class="hover-card bg-gradient-to-br from-neutral-50 via-slate-50 to-zinc-100 hover:from-rose-100 hover:via-pink-50 hover:to-rose-100 rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                <div class="flex flex-col h-full">
+                                    <div class="flex items-center space-x-2 mb-4">
+                                        <span
+                                            class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">Browser
+                                            Extension</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2 transition-colors duration-300">Enhance Gemini
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 transition-colors duration-300">Quick Search, Context
+                                        Menus, And more for
+                                        Gemini</p>
+                                    <div class="flex items-center space-x-3 mt-auto">
+                                        <a href="https://chromewebstore.google.com/detail/enhance-gemini/hengddlmmobpckpmaalbmdlofpiljnon"
+                                            class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-rose-500 text-slate-600 hover:text-white transition-all duration-300 backdrop-blur-sm border border-gray-300 hover:border-rose-500">
+                                            Chrome Web Store
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DuckDuckGo Max -->
+                            <div
+                                class="hover-card bg-gradient-to-br from-neutral-50 via-slate-50 to-zinc-100 hover:from-violet-100 hover:via-purple-50 hover:to-violet-100 rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                <div class="flex flex-col h-full">
+                                    <div class="flex items-center space-x-2 mb-4">
+                                        <span
+                                            class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">Browser
+                                            Extension</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2 transition-colors duration-300">DuckDuckGo Max
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 transition-colors duration-300">Integrate DuckDuckGo
+                                        Search with Chrome</p>
+                                    <div class="flex items-center space-x-3 mt-auto">
+                                        <a href="https://chromewebstore.google.com/detail/search-with-duckduckgo/amkahembcklobdkoaaepgfpmdnobmdkh"
+                                            class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-violet-500 text-slate-600 hover:text-white transition-all duration-300 backdrop-blur-sm border border-gray-300 hover:border-violet-500">
+                                            Chrome Web Store
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- iCloud Mail Notifier -->
+                            <div
+                                class="hover-card bg-gradient-to-br from-neutral-50 via-slate-50 to-zinc-100 hover:from-cyan-100 hover:via-sky-50 hover:to-cyan-100 rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                <div class="flex flex-col h-full">
+                                    <div class="flex items-center space-x-2 mb-4">
+                                        <span
+                                            class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">Browser
+                                            Extension</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2 transition-colors duration-300">iCloud Mail
+                                        Notifier</h3>
+                                    <p class="text-gray-600 mb-4 transition-colors duration-300">iCloud Email
+                                        Notifications</p>
+                                    <div class="flex items-center space-x-3 mt-auto">
+                                        <a href="https://chromewebstore.google.com/detail/icloud-mail-notifier-emai/anefcldgailbdienbkcalplbcmkkmeci"
+                                            class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-cyan-500 text-slate-600 hover:text-white transition-all duration-300 backdrop-blur-sm border border-gray-300 hover:border-cyan-500">
+                                            Chrome Web Store
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- New Tab with Gemini -->
+                            <div
+                                class="hover-card bg-gradient-to-br from-neutral-50 via-slate-50 to-zinc-100 hover:from-emerald-100 hover:via-green-50 hover:to-emerald-100 rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                <div class="flex flex-col h-full">
+                                    <div class="flex items-center space-x-2 mb-4">
+                                        <span
+                                            class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">Browser
+                                            Extension</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2 transition-colors duration-300">New Tab with
+                                        Gemini</h3>
+                                    <p class="text-gray-600 mb-4 transition-colors duration-300">Ask Gemini Questions
+                                        from every New Tab</p>
+                                    <div class="flex items-center space-x-3 mt-auto">
+                                        <a href="https://chromewebstore.google.com/detail/new-tab-with-gemini/kmmkcdkmfnpnbjaadgijpbplafnhhbhn"
+                                            class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-emerald-500 text-slate-600 hover:text-white transition-all duration-300 backdrop-blur-sm border border-gray-300 hover:border-emerald-500">
+                                            Chrome Web Store
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Help me With - Search Gemini -->
+                            <div
+                                class="hover-card bg-gradient-to-br from-neutral-50 via-slate-50 to-zinc-100 hover:from-amber-100 hover:via-yellow-50 hover:to-amber-100 rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                <div class="flex flex-col h-full">
+                                    <div class="flex items-center space-x-2 mb-4">
+                                        <span
+                                            class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">Browser
+                                            Extension</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2 transition-colors duration-300">Help me With -
+                                        Search Gemini
+                                        Anywhere</h3>
+                                    <p class="text-gray-600 mb-4 transition-colors duration-300">Search from any website
+                                        from your browser
+                                    </p>
+                                    <div class="flex items-center space-x-3 mt-auto">
+                                        <a href="https://chromewebstore.google.com/detail/help-me-with-search-gemin/lagefbgpdmiidmipmdacofceikkahdhf"
+                                            class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-amber-500 text-slate-600 hover:text-white transition-all duration-300 backdrop-blur-sm border border-gray-300 hover:border-amber-500">
+                                            Chrome Web Store
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Open in Apple Maps -->
+                            <div
+                                class="hover-card bg-gradient-to-br from-neutral-50 via-slate-50 to-zinc-100 hover:from-blue-100 hover:via-sky-50 hover:to-blue-100 rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                <div class="flex flex-col h-full">
+                                    <div class="flex items-center space-x-2 mb-4">
+                                        <span
+                                            class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">Browser
+                                            Extension</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2 transition-colors duration-300">Open in Apple
+                                        Maps</h3>
+                                    <p class="text-gray-600 mb-4 transition-colors duration-300">Convert Google Maps
+                                        links to Apple Maps
+                                        instantly.</p>
+                                    <div class="flex items-center space-x-3 mt-auto">
+                                        <a href="https://chromewebstore.google.com/detail/open-in-apple-maps/ddopdoopcljkmnnjedchbgihdmgimlop"
+                                            class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-blue-500 text-slate-600 hover:text-white transition-all duration-300 backdrop-blur-sm border border-gray-300 hover:border-blue-500">
+                                            Chrome Web Store
+                                        </a>
+                                        <a href="https://github.com/openchampagne/open-in-Apple-Maps"
+                                            class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-slate-700 text-slate-600 hover:text-white transition-all duration-300 backdrop-blur-sm border border-gray-300 hover:border-slate-700">
+                                            GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Past Projects Section -->
+                            <div class="col-span-full mt-12">
+                                <h3 class="text-xl font-semibold text-gray-400 uppercase mb-6">What I've Worked on</h3>
+                            </div>
+
+                            <!-- AwayTab -->
+                            <div
+                                class="hover-card bg-gradient-to-br from-neutral-50 via-slate-50 to-zinc-100 hover:from-fuchsia-100 hover:via-pink-50 hover:to-fuchsia-100 rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                <div class="flex flex-col h-full">
+                                    <div class="flex items-center space-x-2 mb-4">
+                                        <span
+                                            class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">Browser
+                                            Extension</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2 transition-colors duration-300">AwayTab</h3>
+                                    <p class="text-gray-600 mb-4 transition-colors duration-300">Discover amazing places
+                                        to travel to in every new
+                                        tab you open.</p>
+                                    <div class="flex items-center space-x-3 mt-auto">
+                                        <a href="https://chromewebstore.google.com/detail/awaytab-travel-background/homnophpjlhlpaglnfpomcambjmgceem"
+                                            class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-fuchsia-500 text-slate-600 hover:text-white transition-all duration-300 backdrop-blur-sm border border-gray-300 hover:border-fuchsia-500">
+                                            Chrome Web Store
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- iCloud Dashboard -->
+                            <div
+                                class="hover-card bg-gradient-to-br from-neutral-50 via-slate-50 to-zinc-100 hover:from-indigo-100 hover:via-blue-50 hover:to-indigo-100 rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                <div class="flex flex-col h-full">
+                                    <div class="flex items-center space-x-2 mb-4">
+                                        <span
+                                            class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">Browser
+                                            Extension</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2 transition-colors duration-300">iCloud
+                                        Dashboard</h3>
+                                    <p class="text-gray-600 mb-4 transition-colors duration-300">Easily access iCloud on
+                                        Chrome</p>
+                                    <div class="flex items-center space-x-3 mt-auto">
+                                        <a href="https://chrome.google.com/webstore/detail/icloud-dashboard/mgojgddhfhekopdpkocobommepgdeffb"
+                                            class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-indigo-500 text-slate-600 hover:text-white transition-all duration-300 backdrop-blur-sm border border-gray-300 hover:border-indigo-500">
+                                            Chrome Web Store
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PackageTrack.com -->
+                            <div
+                                class="hover-card bg-gradient-to-br from-neutral-50 via-slate-50 to-zinc-100 hover:from-orange-100 hover:via-amber-50 hover:to-orange-100 rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                <div class="flex flex-col h-full">
+                                    <div class="flex items-center space-x-2 mb-4">
+                                        <span
+                                            class="text-sm font-medium px-4 py-1.5 rounded-full bg-amber-100/50 text-amber-700 backdrop-blur-sm">
+                                            Archived
+                                        </span>
+                                        <span
+                                            class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">Website</span>
+
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2 transition-colors duration-300">
+                                        PackageTrack.com</h3>
+                                    <p class="text-gray-600 mb-4 transition-colors duration-300">Package Tracking
+                                        Website</p>
+                                    <div class="flex items-center space-x-3 mt-auto">
+                                        <a href="https://web.archive.org/web/20210525024552/https://packagetrack.com/"
+                                            class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-orange-500 text-slate-600 hover:text-white transition-all duration-300 backdrop-blur-sm border border-gray-300 hover:border-orange-500">
+                                            View Archive
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="my-4 duration-150 ease-in group:transition-colors group hover:text-blue-700">
-                        <a class="duration-150"
-                            href="https://chromewebstore.google.com/detail/search-with-duckduckgo/amkahembcklobdkoaaepgfpmdnobmdkh">
-                            <h4 class="font-semibold text-md">DuckDuckGo Max <span
-                                    class="px-2 text-sm font-semibold text-gray-500 bg-gray-200 rounded-md group-hover:text-blue-700 group-hover:ease-in group-hover:duration-150">Browser
-                                    Extension</span></h4>
-                            <p class="font-thin">
-                                Integrate DuckDuckGo Search with Chrome
-                            </p>
-                        </a>
-                    </div>
+                    <div class="container mx-auto px-8 py-12">
+                        <div class="max-w-6xl mx-auto">
+                            <h3 class="text-xl font-semibold text-gray-400 uppercase mb-6">How to Reach Me</h3>
 
-                    <div class="my-4 duration-150 ease-in group:transition-colors group hover:text-blue-700">
-                        <a class="duration-150"
-                            href="https://chromewebstore.google.com/detail/icloud-mail-notifier-emai/anefcldgailbdienbkcalplbcmkkmeci">
-                            <h4 class="font-semibold text-md">iCloud Mail Notifier <span
-                                    class="px-2 text-sm font-semibold text-gray-500 bg-gray-200 rounded-md group-hover:text-blue-700 group-hover:ease-in group-hover:duration-150">Browser
-                                    Extension</span></h4>
-                            <p class="font-thin">
-                                iCloud Email Notifications
-                            </p>
-                        </a>
-                    </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <!-- Email Card -->
+                                <div
+                                    class="hover-card bg-stone-50 hover:bg-[#D2C6B5] rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                    <div class="flex flex-col h-full">
+                                        <div class="flex items-center justify-between mb-4">
+                                            <span
+                                                class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">Email</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-6 w-6 text-gray-400 group-hover:text-stone-700 transition-colors duration-300"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="text-xl font-semibold mb-2 transition-colors duration-300">Send me an
+                                            Email</h3>
+                                        <p
+                                            class="text-gray-600 group-hover:text-stone-700 mb-4 transition-colors duration-300">
+                                            Get in touch via email for collaborations or questions
+                                        </p>
+                                        <div class="flex items-center space-x-3 mt-auto">
+                                            <a href="mailto:fcas@hey.com"
+                                                class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-stone-700 text-stone-600 hover:text-stone-50 transition-all duration-300 backdrop-blur-sm border border-stone-300 hover:border-stone-700 w-full text-center">
+                                                fcas@hey.com
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <div class="my-4 duration-150 ease-in group:transition-colors group hover:text-blue-700">
-                        <a class="duration-150"
-                            href="https://chromewebstore.google.com/detail/new-tab-with-gemini/kmmkcdkmfnpnbjaadgijpbplafnhhbhn">
-                            <h4 class="font-semibold text-md">New Tab with Gemini <span
-                                    class="px-2 text-sm font-semibold text-gray-500 bg-gray-200 rounded-md group-hover:text-blue-700 group-hover:ease-in group-hover:duration-150">Browser
-                                    Extension</span></h4>
-                            <p class="font-thin">
-                                Ask Gemini Questions from every New Tab
-                            </p>
-                        </a>
-                    </div>
+                                <!-- LinkedIn Card -->
+                                <div
+                                    class="hover-card bg-stone-50 hover:bg-[#8B9D83] rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                    <div class="flex flex-col h-full">
+                                        <div class="flex items-center justify-between mb-4">
+                                            <span
+                                                class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">LinkedIn</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-6 w-6 text-gray-400 group-hover:text-stone-50 transition-colors duration-300"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
+                                        <h3
+                                            class="text-xl font-semibold mb-2 transition-colors duration-300 group-hover:text-stone-50">
+                                            Connect on LinkedIn</h3>
+                                        <p
+                                            class="text-gray-600 group-hover:text-stone-100 mb-4 transition-colors duration-300">
+                                            Let's connect on LinkedIn
+                                        </p>
+                                        <div class="flex items-center space-x-3 mt-auto">
+                                            <a href="https://www.linkedin.com/in/openchampagne"
+                                                class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-stone-50 text-stone-600 hover:text-stone-700 transition-all duration-300 backdrop-blur-sm border border-stone-300 hover:border-stone-700 w-full text-center">
+                                                View my Profile
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <div class="my-4 duration-150 ease-in group:transition-colors group hover:text-blue-700">
-                        <a class="duration-150"
-                            href="https://chromewebstore.google.com/detail/help-me-with-search-gemin/lagefbgpdmiidmipmdacofceikkahdhf">
-                            <h4 class="font-semibold text-md">Help me With - Search Gemini Anywhere <span
-                                    class="px-2 text-sm font-semibold text-gray-500 bg-gray-200 rounded-md group-hover:text-blue-700 group-hover:ease-in group-hover:duration-150">Browser
-                                    Extension</span></h4>
-                            <p class="font-thin">
-                                Search from any website from your browser
-                            </p>
-                        </a>
-                    </div>
-
-                    <h5 class="my-4 text-sm font-semibold text-gray-400 uppercase">What I've Worked on</h5>
-
-
-                    <div class="my-4 duration-150 ease-in group:transition-colors group hover:text-blue-700">
-                        <a class="duration-150"
-                            href="https://chromewebstore.google.com/detail/awaytab-travel-background/homnophpjlhlpaglnfpomcambjmgceem">
-                            <h4 class="font-semibold text-md">AwayTab <span
-                                    class="px-2 text-sm font-semibold text-gray-500 bg-gray-200 rounded-md group-hover:text-blue-700 group-hover:ease-in group-hover:duration-150">Browser
-                                    Extension</span></h4>
-                            <p class="font-thin">
-                                Discover amazing places to travel to in every new tab you open.
-                            </p>
-                        </a>
-                    </div>
-
-
-                    <div class="my-4 duration-150 ease-in group:transition-colors group hover:text-blue-700">
-                        <a class="duration-150"
-                            href="https://chrome.google.com/webstore/detail/icloud-dashboard/mgojgddhfhekopdpkocobommepgdeffb">
-                            <h4 class="font-semibold text-md">iCloud Dashboard <span
-                                    class="px-2 text-sm font-semibold text-gray-500 bg-gray-200 rounded-md group-hover:text-blue-700 group-hover:ease-in group-hover:duration-150">Browser
-                                    Extension</span></h4>
-                            <p class="font-thin">
-                                Easily access iCloud on Chrome
-                            </p>
-                        </a>
-                    </div>
-
-                    <div class="my-4 duration-150 ease-in group:transition-colors group hover:text-blue-700">
-                        <a class="duration-150"
-                            href="https://web.archive.org/web/20210525024552/https://packagetrack.com/">
-                            <h4 class="font-semibold text-md">PackageTrack.com <span
-                                    class="px-2 text-sm font-semibold text-gray-500 bg-gray-200 rounded-md group-hover:text-blue-700 group-hover:ease-in group-hover:duration-150">
-                                    Website</span> <span
-                                    class="px-2 text-sm font-semibold text-gray-500 bg-yellow-200 rounded-md group-hover:text-yellow-700 group-hover:ease-in group-hover:duration-150">
-                                    Web Archive</span></h4>
-                            <p class="font-thin">
-                                Package Tracking Website
-                            </p>
-                        </a>
-                    </div>
-
-                    <h5 class="pt-4 mb-2 text-sm font-semibold text-gray-400 uppercase">How to Reach Me</h5>
-
-                    <div class="my-4 transition-colors duration-150 ease-in hover:text-blue-700">
-                        <a href="mailto:fcas@hey.com">
-                            <h4 class="font-semibold text-md">Send me an Email</h4>
-                        </a>
-                    </div>
-
-                    <div class="my-4 transition-colors duration-150 ease-in hover:text-blue-700">
-                        <a href="https://www.linkedin.com/in/f-eli-pe/">
-                            <h4 class="font-semibold text-md">Connect with me on LinkedIn</h4>
-                        </a>
-                    </div>
-
-                    <div class="my-4 transition-colors duration-150 ease-in hover:text-blue-700">
-                        <a href="https://github.com/f-eli-pe" class="my-4 hover:text-blue-700">
-                            <h4 class="font-semibold text-md">Visit my GitHub</h4>
-                        </a>
+                                <!-- GitHub Card -->
+                                <div
+                                    class="hover-card bg-stone-50 hover:bg-[#B4A187] rounded-xl p-6 shadow-sm hover:shadow-md group">
+                                    <div class="flex flex-col h-full">
+                                        <div class="flex items-center justify-between mb-4">
+                                            <span
+                                                class="text-sm font-medium bg-white/50 px-4 py-1.5 rounded-full backdrop-blur-sm">GitHub</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-6 w-6 text-gray-400 group-hover:text-stone-50 transition-colors duration-300"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                            </svg>
+                                        </div>
+                                        <h3
+                                            class="text-xl font-semibold mb-2 transition-colors duration-300 group-hover:text-stone-50">
+                                            Check my GitHub</h3>
+                                        <p
+                                            class="text-gray-600 group-hover:text-stone-100 mb-4 transition-colors duration-300">
+                                            Explore my open-source projects and contributions
+                                        </p>
+                                        <div class="flex items-center space-x-3 mt-auto">
+                                            <a href="https://github.com/openchampagne"
+                                                class="text-sm font-medium px-4 py-1.5 rounded-full bg-white/50 hover:bg-stone-50 text-stone-600 hover:text-stone-700 transition-all duration-300 backdrop-blur-sm border border-stone-300 hover:border-stone-700 w-full text-center">
+                                                Check out my GitHub
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-
             </div>
-
         </div>
     </div>
-    <!-- GSAP Core -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-
-    <!-- GSAP ScrollTrigger Plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
 
-        let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#felipe"
-            }
+            const tl = gsap.timeline();
+
+            tl.from("#felipe", {
+                x: -200,
+                opacity: 0,
+                duration: 0.7,
+                ease: "power3.out"
+            })
+                .from(".text1", {
+                    y: -150,
+                    opacity: 0,
+                    duration: 0.5,
+                    ease: "bounce.out"
+                }, "<");
+
+            const allCards = document.querySelectorAll('.hover-card');
+
+            tl.to(allCards, {
+                x: 0,
+                y: 0,
+                opacity: 1,
+                duration: 0.6,
+                stagger: {
+                    each: 0.1,
+                    from: "start"
+                },
+                ease: "power2.out"
+            }, "-=0.3");
+
+            const sectionHeaders = document.querySelectorAll('.col-span-full');
+            tl.from(sectionHeaders, {
+                y: 50,
+                opacity: 0,
+                duration: 0.6,
+                stagger: 0.2,
+                ease: "power2.out"
+            }, "<");
         });
 
-        tl.from("#felipe", {
-            x: -200,
-            opacity: 0,
-            duration: 0.7,
-            ease: "power3.out"
-        })
-            .from(".text1", {
-                y: -150,
-                opacity: 0,
-                duration: 0.5,
-                ease: "bounce.out",
-                delay: 0.2,
-            }, "<");
+        document.querySelectorAll('.hover-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('active');
+            });
 
-
-
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('active');
+            });
+        });
     </script>
-
 </body>
-
 
 </html>

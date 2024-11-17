@@ -1,7 +1,7 @@
 {
   "name": "f.eli.pe",
-  "version": "2.1.0",
-  "description": "Felipe's super cool and super minimal portfolio",
+  "version": "2.2.0",
+  "description": "Felipe's portfolio site",
   "main": "tailwind.config.js",
   "scripts": {
     "build": "npx tailwindcss -i ./index.css -o tailwind.css --watch"

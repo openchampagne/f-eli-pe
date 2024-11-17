@@ -3,5 +3,44 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-320px * 6)
+    ); /* Adjusts based on card width + gap */
+  }
+}
+
+.infinite-scroll-container:hover .animate-scroll {
+  animation-play-state: paused;
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+/* Pastel color classes */
+.bg-pastel-1 {
+  background-color: #e0f4ff;
+}
+.bg-pastel-2 {
+  background-color: #e8f3d6;
+}
+.bg-pastel-3 {
+  background-color: #ffefd6;
+}
+.bg-pastel-4 {
+  background-color: #ffe5f1;
+}
+.bg-pastel-5 {
+  background-color: #f3e5ff;
+}
+.bg-pastel-6 {
+  background-color: #ffe5e5;
 }
